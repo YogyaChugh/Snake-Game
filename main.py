@@ -36,7 +36,8 @@ class fruit:
         global froster
         while (self.loc>LEN_CELLS*CELL_SIZE-140 and self.loc2<CELL_SIZE):
             fruit.randomizing(self)
-        apple = pygame.image.load('assets/apple.png')
+        apple = pygame.image.load('assets/fruit.png')
+        apple = pygame.transform.scale(apple,(22,22))
         goa = pygame.Rect(self.loc*CELL_SIZE,self.loc2*CELL_SIZE,CELL_SIZE,CELL_SIZE)
         screen.blit(apple,goa)
     def randomizing(self):
@@ -173,19 +174,33 @@ def initialize():
     tame = pygame.time.Clock()
 initialize()
 goal1 = pygame.image.load("assets/body_bottomleft.png")
+goal1 = pygame.transform.scale(goal1,(22,22))
 goal2 = pygame.image.load("assets/body_bottomright.png")
+goal2 = pygame.transform.scale(goal2,(22,22))
 goal3 = pygame.image.load("assets/body_horizontal.png")
+goal3 = pygame.transform.scale(goal3,(22,22))
 goal4 = pygame.image.load("assets/body_topleft.png")
+goal4 = pygame.transform.scale(goal4,(22,22))
 goal5 = pygame.image.load("assets/body_topright.png")
+goal5 = pygame.transform.scale(goal5,(22,22))
 goal6 = pygame.image.load("assets/body_vertical.png")
+goal6 = pygame.transform.scale(goal6,(22,22))
 goal7 = pygame.image.load("assets/head_down.png")
+goal7 = pygame.transform.scale(goal7,(22,22))
 goal8 = pygame.image.load("assets/head_left.png")
+goal8 = pygame.transform.scale(goal8,(22,22))
 goal9 = pygame.image.load("assets/head_right.png")
+goal9 = pygame.transform.scale(goal9,(22,22))
 goal10 = pygame.image.load("assets/head_up.png")
+goal10 = pygame.transform.scale(goal10,(22,22))
 goal11 = pygame.image.load("assets/tail_down.png")
+goal11 = pygame.transform.scale(goal11,(22,22))
 goal12 = pygame.image.load("assets/tail_left.png")
+goal12 = pygame.transform.scale(goal12,(22,22))
 goal13 = pygame.image.load("assets/tail_right.png")
+goal13 = pygame.transform.scale(goal13,(22,22))
 goal14 = pygame.image.load("assets/tail_up.png")
+goal14 = pygame.transform.scale(goal14,(22,22))
 
 
 def mummy():
