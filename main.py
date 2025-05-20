@@ -25,10 +25,8 @@ difficulty_surface=pygame.Surface((200,40))
 sound=pygame.Surface((200,40))
 back=pygame.Surface((200,40))
 tame=pygame.time.Clock()
-print("\nHINT:- ABSOLUTE PATH LIKE C:\\Users\\Lenovo\\OneDrive\\Desktop\\Game\n")
-froster=input("Enter Absolute Path of Resources Folder: ")
 def blake():
-    pygame.mixer.music.load(f'{froster}/bonus.mp3')
+    pygame.mixer.music.load('audio/bonus.wav')
     pygame.mixer.music.play()
     return
 class fruit:
@@ -38,7 +36,7 @@ class fruit:
         global froster
         while (self.loc>LEN_CELLS*CELL_SIZE-140 and self.loc2<CELL_SIZE):
             fruit.randomizing(self)
-        apple = pygame.image.load(f'{froster}/apple.png')
+        apple = pygame.image.load('assets/apple.png')
         goa = pygame.Rect(self.loc*CELL_SIZE,self.loc2*CELL_SIZE,CELL_SIZE,CELL_SIZE)
         screen.blit(apple,goa)
     def randomizing(self):
@@ -102,7 +100,7 @@ class Snake:
         for i in self.blocks:
             if self.blocks.count(i)>1 or i[0]==0 or i[1]==0 or i[0]==LEN_CELLS-1 or i[1]==WID_CELLS-1 or bobby==1:
                 if bobby!=1 and sound1==0:
-                    pygame.mixer.music.load(f'{froster}/lose.wav')
+                    pygame.mixer.music.load('audio/lose.wav')
                     pygame.mixer.music.play()
                 initialize()
                 if bobby!=1:
@@ -174,20 +172,20 @@ def initialize():
     pygame.display.set_caption("Snake Game")
     tame = pygame.time.Clock()
 initialize()
-goal1 = pygame.image.load(f"{froster}/body_bottomleft.png")
-goal2 = pygame.image.load(f"{froster}/body_bottomright.png")
-goal3 = pygame.image.load(f"{froster}/body_horizontal.png")
-goal4 = pygame.image.load(f"{froster}/body_topleft.png")
-goal5 = pygame.image.load(f"{froster}/body_topright.png")
-goal6 = pygame.image.load(f"{froster}/body_vertical.png")
-goal7 = pygame.image.load(f"{froster}/head_down.png")
-goal8 = pygame.image.load(f"{froster}/head_left.png")
-goal9 = pygame.image.load(f"{froster}/head_right.png")
-goal10 = pygame.image.load(f"{froster}/head_up.png")
-goal11 = pygame.image.load(f"{froster}/tail_down.png")
-goal12 = pygame.image.load(f"{froster}/tail_left.png")
-goal13 = pygame.image.load(f"{froster}/tail_right.png")
-goal14 = pygame.image.load(f"{froster}/tail_up.png")
+goal1 = pygame.image.load("assets/body_bottomleft.png")
+goal2 = pygame.image.load("assets/body_bottomright.png")
+goal3 = pygame.image.load("assets/body_horizontal.png")
+goal4 = pygame.image.load("assets/body_topleft.png")
+goal5 = pygame.image.load("assets/body_topright.png")
+goal6 = pygame.image.load("assets/body_vertical.png")
+goal7 = pygame.image.load("assets/head_down.png")
+goal8 = pygame.image.load("assets/head_left.png")
+goal9 = pygame.image.load("assets/head_right.png")
+goal10 = pygame.image.load("assets/head_up.png")
+goal11 = pygame.image.load("assets/tail_down.png")
+goal12 = pygame.image.load("assets/tail_left.png")
+goal13 = pygame.image.load("assets/tail_right.png")
+goal14 = pygame.image.load("assets/tail_up.png")
 
 
 def mummy():
@@ -325,7 +323,7 @@ def menu(one=0):
         mummy()
         singisbling+=1
         singisbling%=100
-        logo=pygame.image.load(f'{froster}/logo-removebg-preview.png')
+        logo=pygame.image.load('assets/logo-removebg-preview.png')
         screen.blit(logo,(18*20,2*20))
         font=pygame.font.Font(None,32)
         text=font.render('Play',True,(0,0,0),agin1)
