@@ -3,7 +3,7 @@ import sys
 
 import pygame as pg
 
-pg.mixer.init() # The audio one
+pg.mixer.init()  # The audio one
 modded = ["Easy", "Medium", "Hard"]
 CELL_SIZE = 20
 LEN_CELLS = 50
